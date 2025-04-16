@@ -1,0 +1,28 @@
+*{
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.fs-7{
+    font-size: 12px !important;
+}
+.sidebar-rounded{
+    border-radius: 0 12px 12px 0 !important;
+}
+.sidebar-active{
+    color: #fff !important;
+    background-color: #3AABFC !important;
+}
+.rounded-2{
+    border-radius: 12px !important;
+}
+.bg-hi{
+    background-color: #9ED7FF !important;
+}
+.bg-done{
+    background-color: #97F39E !important;
+}
+.bg-progress{
+    background-color: #97BCF3 !important;
+}
+.bg-pending{
+    background-color: #FFB662 !important;
+}
