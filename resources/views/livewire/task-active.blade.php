@@ -31,7 +31,13 @@
                                 <p class="p-0 m-0">Low</p>
                             </div>
                         </td>
-                        <td class="text-center">{{ SiteHelpers::date_indo('2025-02-25') }}</td>
+                        <td class="text-center">
+                            {{ \Carbon\Carbon::parse('2025-05-02T09:00:00')->translatedFormat('j F Y, H:i') }}
+                            <br>
+                            <small class="text-muted">
+                                ({{ \Carbon\Carbon::parse('2025-05-02T09:00:00')->diffForHumans() }})
+                            </small>
+                        </td>
                         <td>
                             <div class="d-flex justify-content-end gap-2">
                                 <div class="dropdown position-static">
@@ -82,7 +88,13 @@
                                 <p class="p-0 m-0">Low</p>
                             </div>
                         </td>
-                        <td class="text-center">{{ SiteHelpers::date_indo('2025-02-25') }}</td>
+                        <td class="text-center">
+                            {{ \Carbon\Carbon::parse('2025-05-02T09:00:00')->translatedFormat('j F Y, H:i') }}
+                            <br>
+                            <small class="text-muted">
+                                ({{ \Carbon\Carbon::parse('2025-05-02T09:00:00')->diffForHumans() }})
+                            </small>
+                        </td>
                         <td>
                             <div class="d-flex justify-content-end gap-2">
                                 <div class="dropdown position-static">
@@ -133,7 +145,13 @@
                                 <p class="p-0 m-0">Low</p>
                             </div>
                         </td>
-                        <td class="text-center">{{ SiteHelpers::date_indo('2025-02-25') }}</td>
+                        <td class="text-center">
+                            {{ \Carbon\Carbon::parse('2025-05-02T09:00:00')->translatedFormat('j F Y, H:i') }}
+                            <br>
+                            <small class="text-muted">
+                                ({{ \Carbon\Carbon::parse('2025-05-02T09:00:00')->diffForHumans() }})
+                            </small>
+                        </td>
                         <td>
                             <div class="d-flex justify-content-end gap-2">
                                 <div class="dropdown position-static">
@@ -181,9 +199,9 @@
                     <tr>
                         <td colspan="4">
                             <div class="d-flex flex-column justify-content-center align-items-center">
-                                <img src="{{ asset('img/empty_active.png') }}" alt=""
-                                    style="width: 200px">
-                                <p class="fw-bold d-inline" style="font-size: small">You don't have any tasks yet. Create one to get started!</p>
+                                <img src="{{ asset('img/empty_active.png') }}" alt="" style="width: 200px">
+                                <p class="fw-bold d-inline" style="font-size: small">You don't have any tasks yet.
+                                    Create one to get started!</p>
                             </div>
                         </td>
                     </tr>

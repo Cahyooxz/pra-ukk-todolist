@@ -44,8 +44,16 @@
                                             <p class="p-0 m-0">High</p>
                                         </div>
                                     </td>
-                                    <td class="text-center text-danger">{{ SiteHelpers::date_indo('2025-05-02') }}
-                                        (5 days late)
+                                    @php
+                                        $deadline = \Carbon\Carbon::parse('2025-02-02T09:00:00');
+                                        $now = \Carbon\Carbon::now();
+                                        // ngecek sekarang
+                                        $lateDays = $now->diffInDays($deadline, false);
+                                    @endphp
+
+                                    <td class="text-center text-danger">
+                                        {{ $deadline->translatedFormat('j F Y, H:i') }}
+                                        ({{ abs($lateDays) }} days late)
                                     </td>
                                     <td>
                                         <div class="d-flex justify-content-center gap-2">
@@ -132,7 +140,9 @@
                                             <p class="p-0 m-0">Normal</p>
                                         </div>
                                     </td>
-                                    <td class="text-center">{{ SiteHelpers::date_indo('2025-02-02') }}</td>
+                                    <td class="text-center">
+                                        {{ \Carbon\Carbon::parse('2025-02-02T09:00:00')->translatedFormat('j F Y, H:i') }}
+                                    </td>
                                     <td class="text-center">
                                         <span class="badge bg-success">
                                             <i class="fas fa-check-circle me-1"></i> Completed
@@ -144,7 +154,8 @@
                                         <div class="d-flex flex-column justify-content-center align-items-center">
                                             <img src="{{ asset('img/empty_completed.png') }}" alt=""
                                                 style="width: 200px">
-                                            <p class="fw-bold d-inline" style="font-size: small">Still zero, but hey, everyone starts somewhere!</p>
+                                            <p class="fw-bold d-inline" style="font-size: small">Still zero, but hey,
+                                                everyone starts somewhere!</p>
                                         </div>
                                     </td>
                                 </tr>
@@ -163,20 +174,20 @@
                         <div class="modal-body">
                             <p>Are you sure you want to change the status to <span id="selectedStatus"></span>?</p>
                         </div>
-                    </form>
-                    <div class="modal-footer">
-                        <div class="col-12 d-flex justify-content-end gap-2 p-0">
-                            <button class="btn rounded2 fw-semibold py-2 btn-blue" data-bs-dismiss="modal" role="button"
-                                aria-disabled="true">
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <i class="fa-solid fa-arrow-turn-down fa-rotate-90 fs-6 me-2 flex-shrink-0"></i>
-                                    <span>Cancel</span>
-                                </div>
-                            </button>
-                            <button class="btn rounded2 fw-semibold py-2 btn-success" type="submit"><i
-                                    class="fa-solid fa-floppy-disk fs-6 me-2"></i>Yes, Changes</button>
+                        <div class="modal-footer">
+                            <div class="col-12 d-flex justify-content-end gap-2 p-0">
+                                <button class="btn rounded2 fw-semibold py-2 btn-blue" data-bs-dismiss="modal"
+                                    role="button" aria-disabled="true">
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <i class="fa-solid fa-arrow-turn-down fa-rotate-90 fs-6 me-2 flex-shrink-0"></i>
+                                        <span>Cancel</span>
+                                    </div>
+                                </button>
+                                <button class="btn rounded2 fw-semibold py-2 btn-success" type="submit"><i
+                                        class="fa-solid fa-floppy-disk fs-6 me-2"></i>Yes, Changes</button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
