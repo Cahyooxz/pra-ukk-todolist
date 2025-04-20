@@ -45,7 +45,8 @@
                                         </div>
                                     </td>
                                     <td class="text-center text-danger">{{ SiteHelpers::date_indo('2025-05-02') }}
-                                        (5 days late)</td>
+                                        (5 days late)
+                                    </td>
                                     <td>
                                         <div class="d-flex justify-content-center gap-2">
                                             <div class="dropdown position-static">
@@ -90,7 +91,15 @@
                                         </div>
                                     </td>
                                 </tr>
-                                <!-- Tambahkan lebih banyak task overdue di sini -->
+                                <tr>
+                                    <td colspan="4">
+                                        <div class="d-flex flex-column justify-content-center align-items-center">
+                                            <img src="{{ asset('img/empty_overdue.png') }}" alt=""
+                                                style="width: 200px">
+                                            <p class="fw-bold d-inline" style="font-size: small">No overdue tasks found.</p>
+                                        </div>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -130,7 +139,15 @@
                                         </span>
                                     </td>
                                 </tr>
-                                <!-- Tambahkan lebih banyak task selesai di sini -->
+                                <tr>
+                                    <td colspan="4">
+                                        <div class="d-flex flex-column justify-content-center align-items-center">
+                                            <img src="{{ asset('img/empty_completed.png') }}" alt=""
+                                                style="width: 200px">
+                                            <p class="fw-bold d-inline" style="font-size: small">Still zero, but hey, everyone starts somewhere!</p>
+                                        </div>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>

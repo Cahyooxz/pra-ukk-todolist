@@ -178,6 +178,15 @@
                             </div>
                         </td>
                     </tr>
+                    <tr>
+                        <td colspan="4">
+                            <div class="d-flex flex-column justify-content-center align-items-center">
+                                <img src="{{ asset('img/empty_active.png') }}" alt=""
+                                    style="width: 200px">
+                                <p class="fw-bold d-inline" style="font-size: small">You don't have any tasks yet. Create one to get started!</p>
+                            </div>
+                        </td>
+                    </tr>
                     <!-- Tambahkan lebih banyak task aktif di sini -->
                 </tbody>
             </table>
