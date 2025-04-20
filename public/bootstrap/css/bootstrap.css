@@ -2145,7 +2145,7 @@ progress {
   background-color: var(--bs-body-bg);
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /* box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); */
 }
 .form-control::-webkit-date-and-time-value {
   min-width: 85px;
@@ -2334,7 +2334,7 @@ textarea.form-control-lg {
 .form-select:focus {
   border-color: #86b7fe;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  /* box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25); */
 }
 .form-select[multiple], .form-select[size]:not([size="1"]) {
   padding-right: 0.75rem;
@@ -2921,7 +2921,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-control:invalid:focus, .form-control.is-invalid:focus {
   border-color: var(--bs-form-invalid-border-color);
-  box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
+  /* box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25); */
 }
 
 .was-validated textarea.form-control:invalid, textarea.form-control.is-invalid {
@@ -2940,7 +2940,7 @@ textarea.form-control-lg {
 }
 .was-validated .form-select:invalid:focus, .form-select.is-invalid:focus {
   border-color: var(--bs-form-invalid-border-color);
-  box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
+  /* box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25); */
 }
 
 .was-validated .form-control-color:invalid, .form-control-color.is-invalid {
@@ -2954,7 +2954,7 @@ textarea.form-control-lg {
   background-color: var(--bs-form-invalid-color);
 }
 .was-validated .form-check-input:invalid:focus, .form-check-input.is-invalid:focus {
-  box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25);
+  /* box-shadow: 0 0 0 0.25rem rgba(var(--bs-danger-rgb), 0.25); */
 }
 .was-validated .form-check-input:invalid ~ .form-check-label, .form-check-input.is-invalid ~ .form-check-label {
   color: var(--bs-form-invalid-color);

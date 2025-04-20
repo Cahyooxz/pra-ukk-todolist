@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="icon" type="image/png" href="{{ asset('img/logo.png') }}">
+    @livewireStyles
     @vite(['resources/css/app.css', 'public/css/style.css'])
 </head>
 
@@ -75,6 +76,6 @@
     {{-- <script src="{{ asset('fullcalendar/packages/bootstrap5/index.global.js') }}"></script> --}}
     @stack('scripts')
     @include('sweetalert::alert')
+    @livewireScripts
 </body>
-
 </html>

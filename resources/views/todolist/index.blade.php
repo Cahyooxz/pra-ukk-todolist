@@ -15,179 +15,7 @@
                         Active Task <span class="bg-number-task rounded-circle ms-2"><small>5</small></span>
                     </button>
                 </h2>
-                    <div id="collapseActive" class="accordion-collapse collapse show" data-bs-parent="#taskAccordion">
-                        <div class="accordion-body p-0">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th width="40%">Task</th>
-                                        <th width="8%" class="text-muted fw-semibold">Priority</th>
-                                        <th width="30%" class="text-muted fw-semibold text-center">Deadline</th>
-                                        <th width="10%" class="text-muted fw-semibold text-center">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Judul Task</td>
-                                        <td>
-                                            <div class="low-alert">
-                                                <p class="p-0 m-0">Low</p>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">{{ SiteHelpers::date_indo('2025-02-25') }}</td>
-                                        <td>
-                                            <div class="d-flex justify-content-center gap-2">
-                                                <div class="dropdown position-static">
-                                                    <button
-                                                        class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2 py-1"
-                                                        type="button" data-bs-toggle="dropdown">
-                                                        <i class="fas fa-circle-notch pending"></i>
-                                                        <span>Pending</span>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li>
-                                                            <a onclick="changeStatus(1,0)"
-                                                                class="dropdown-item d-flex align-items-center gap-2"
-                                                                href="#" data-status="pending">
-                                                                <i class="fas fa-circle-notch pending"></i>
-                                                                <span>Pending</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a onclick="changeStatus(1,1)"
-                                                                class="dropdown-item d-flex align-items-center gap-2"
-                                                                href="#" data-status="in-progress">
-                                                                <i class="fas fa-spinner in-progress"></i>
-                                                                <span>In Progress</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a onclick="changeStatus(1,2)"
-                                                                class="dropdown-item d-flex align-items-center gap-2"
-                                                                href="#" data-status="completed">
-                                                                <i class="fas fa-check-circle completed"></i>
-                                                                <span>Completed</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <a class="btn btn-warning text-white" style="font-size: small"
-                                                    href="{{ route('todolist.edit', 1) }}"><i
-                                                        class="fa-solid fa-pen-to-square"></i></a>
-                                                <a class="btn btn-danger text-white" style="font-size: small"
-                                                    data-confirm-delete="true"><i class="fa-solid fa-trash"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Judul Task</td>
-                                        <td>
-                                            <div class="low-alert">
-                                                <p class="p-0 m-0">Low</p>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">{{ SiteHelpers::date_indo('2025-02-25') }}</td>
-                                        <td>
-                                            <div class="d-flex justify-content-center gap-2">
-                                                <div class="dropdown position-static">
-                                                    <button
-                                                        class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2 py-1"
-                                                        type="button" data-bs-toggle="dropdown">
-                                                        <i class="fas fa-spinner in-progress"></i>
-                                                        <span>In Progress</span>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li>
-                                                            <a onclick="changeStatus(1,0)"
-                                                                class="dropdown-item d-flex align-items-center gap-2"
-                                                                href="#" data-status="pending">
-                                                                <i class="fas fa-circle-notch pending"></i>
-                                                                <span>Pending</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a onclick="changeStatus(1,1)"
-                                                                class="dropdown-item d-flex align-items-center gap-2"
-                                                                href="#" data-status="in-progress">
-                                                                <i class="fas fa-spinner in-progress"></i>
-                                                                <span>In Progress</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a onclick="changeStatus(1,2)"
-                                                                class="dropdown-item d-flex align-items-center gap-2"
-                                                                href="#" data-status="completed">
-                                                                <i class="fas fa-check-circle completed"></i>
-                                                                <span>Completed</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <a class="btn btn-warning text-white" style="font-size: small"
-                                                    href="{{ route('todolist.edit', 1) }}"><i
-                                                        class="fa-solid fa-pen-to-square"></i></a>
-                                                <a class="btn btn-danger text-white" style="font-size: small"
-                                                    data-confirm-delete="true"><i class="fa-solid fa-trash"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Judul Task</td>
-                                        <td>
-                                            <div class="low-alert">
-                                                <p class="p-0 m-0">Low</p>
-                                            </div>
-                                        </td>
-                                        <td class="text-center">{{ SiteHelpers::date_indo('2025-02-25') }}</td>
-                                        <td>
-                                            <div class="d-flex justify-content-center gap-2">
-                                                <div class="dropdown position-static">
-                                                    <button
-                                                        class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-2 py-1"
-                                                        type="button" data-bs-toggle="dropdown">
-                                                        <i class="fas fa-check-circle completed"></i>
-                                                        <span>Completed</span>
-                                                    </button>
-                                                    <ul class="dropdown-menu dropdown-menu-end">
-                                                        <li>
-                                                            <a onclick="changeStatus(1,0)"
-                                                                class="dropdown-item d-flex align-items-center gap-2"
-                                                                href="#" data-status="pending">
-                                                                <i class="fas fa-circle-notch pending"></i>
-                                                                <span>Pending</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a onclick="changeStatus(1,1)"
-                                                                class="dropdown-item d-flex align-items-center gap-2"
-                                                                href="#" data-status="in-progress">
-                                                                <i class="fas fa-spinner in-progress"></i>
-                                                                <span>In Progress</span>
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a onclick="changeStatus(1,2)"
-                                                                class="dropdown-item d-flex align-items-center gap-2"
-                                                                href="#" data-status="completed">
-                                                                <i class="fas fa-check-circle completed"></i>
-                                                                <span>Completed</span>
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <a class="btn btn-warning text-white" style="font-size: small"
-                                                    href="{{ route('todolist.edit', 1) }}"><i
-                                                        class="fa-solid fa-pen-to-square"></i></a>
-                                                <a class="btn btn-danger text-white" style="font-size: small"
-                                                    data-confirm-delete="true"><i class="fa-solid fa-trash"></i></a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <!-- Tambahkan lebih banyak task aktif di sini -->
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                @livewire('task-active')
             </div>
             <!-- Overdue Tasks Accordion Item -->
             <div class="accordion-item">
@@ -316,7 +144,7 @@
                         <input type="hidden" id="task_id" name="task_id">
                         <input type="hidden" id="status_code" name="status_code">
                         <div class="modal-body">
-                            <p>Are you sure you want to change the status to  <span id="selectedStatus"></span>?</p>
+                            <p>Are you sure you want to change the status to <span id="selectedStatus"></span>?</p>
                         </div>
                     </form>
                     <div class="modal-footer">
@@ -328,8 +156,8 @@
                                     <span>Cancel</span>
                                 </div>
                             </button>
-                            <button class="btn rounded2 fw-semibold py-2 btn-success"
-                                type="submit"><i class="fa-solid fa-floppy-disk fs-6 me-2"></i>Yes, Changes</button>
+                            <button class="btn rounded2 fw-semibold py-2 btn-success" type="submit"><i
+                                    class="fa-solid fa-floppy-disk fs-6 me-2"></i>Yes, Changes</button>
                         </div>
                     </div>
                 </div>

@@ -100,7 +100,7 @@
                 events: [{
                         id: 1,
                         title: 'Ngerjain Matematika',
-                        start: '2025-04-19T09:00:00',
+                        start: '2025-04-19T09:00',
                         className: [
                             1 == 3 ? 'high-alert text-white cursor-pointer mb-1' :
                             (1 == 2 ? 'normal-alert text-white cursor-pointer mb-1' :
@@ -110,7 +110,7 @@
                     {
                         id: 2,
                         title: 'Ngerjain Matematika',
-                        start: '2025-04-19T09:00:00',
+                        start: '2025-04-19T09:00',
                         className: [
                             2 == 3 ? 'high-alert text-white cursor-pointer mb-1' :
                             (2 == 2 ? 'normal-alert text-white cursor-pointer mb-1' :
@@ -120,7 +120,7 @@
                     {
                         id: 3,
                         title: 'Ngerjain Matematika',
-                        start: '2025-04-19T09:00:00',
+                        start: '2025-04-19T09:00',
                         className: [
                             3 == 3 ? 'high-alert text-white cursor-pointer mb-1' :
                             (3 == 2 ? 'normal-alert text-white cursor-pointer mb-1' :
