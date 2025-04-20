@@ -15,4 +15,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [TodolistController::class,'dashboard'])->name('todolist.dashboard');
 Route::group(['prefix'=>'todolist'], function(){
     Route::get('/', [TodolistController::class,'index'])->name('todolist.index');
+    Route::get('/create', [TodolistController::class,'create'])->name('todolist.create');
+    Route::get('/edit/{id}', [TodolistController::class,'edit'])->name('todolist.edit');
+});
+Route::group(['prefix'=>'calendar'], function(){
+    Route::get('/', [TodolistController::class,'calendar'])->name('calendar.index');
+    Route::get('/modal', [TodolistController::class,'modal_calendar'])->name('calendar.modal');
 });

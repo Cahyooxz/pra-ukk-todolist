@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
+use Carbon\Carbon;
 
 class TodolistController extends Controller
 {
@@ -15,6 +17,8 @@ class TodolistController extends Controller
     }
     public function index()
     {
+        confirmDelete('Delete Task', 'Are you sure you want to delete?');
+
         return view('todolist.index');
     }
 
@@ -23,7 +27,7 @@ class TodolistController extends Controller
      */
     public function create()
     {
-        //
+        return view('todolist.create');
     }
 
     /**
@@ -31,7 +35,6 @@ class TodolistController extends Controller
      */
     public function store(Request $request)
     {
-        //
     }
 
     /**
@@ -45,15 +48,15 @@ class TodolistController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        return view('todolist.edit');
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -61,8 +64,20 @@ class TodolistController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy($id)
     {
         //
+    }
+    public function calendar()
+    {
+        return view('calendar.index');
+    }
+    public function modal_calendar(Request $request)
+    {
+        return response()->json([
+            'title' => 'Ngerjain Matematika | 30 April 2025',
+            'description' => 'lorem20',
+            'deadline' => '30 April 2025',
+        ]);
     }
 }

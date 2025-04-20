@@ -1,28 +1,171 @@
-*{
+* {
     font-family: "Plus Jakarta Sans", sans-serif;
 }
-.fs-7{
+
+.fs-7 {
     font-size: 12px !important;
 }
-.sidebar-rounded{
+
+.sidebar-rounded {
     border-radius: 0 12px 12px 0 !important;
 }
-.sidebar-active{
+
+.sidebar-active {
     color: #fff !important;
     background-color: #3AABFC !important;
 }
-.rounded-2{
+
+.rounded-2 {
     border-radius: 12px !important;
 }
-.bg-hi{
+
+.bg-hi {
     background-color: #9ED7FF !important;
 }
-.bg-done{
+
+.bg-done {
     background-color: #97F39E !important;
 }
-.bg-progress{
+
+.bg-progress {
     background-color: #97BCF3 !important;
 }
-.bg-pending{
+
+.bg-pending {
     background-color: #FFB662 !important;
+}
+
+.bg-overdue {
+    background-color: #ff6262 !important;
+}
+/* Pastikan dropdown muncul di atas scroll tabel */
+.table-responsive {
+    position: relative;
+    overflow-x: auto;
+}
+
+/* Override z-index dan overflow untuk dropdown */
+.table-responsive .dropdown-menu {
+    position: absolute;
+    z-index: 1050 !important;
+    /* Lebih tinggi dari z-index tabel */
+    overflow: visible !important;
+}
+
+/* Style untuk dropdown item */
+.dropdown-item {
+    padding: 0.5rem 1rem;
+}
+
+/* Warna status */
+.pending {
+    color: #FFA500;
+}
+
+.in-progress {
+    color: #1E90FF;
+}
+
+.completed {
+    color: #32CD32;
+}
+
+.bg-number-task {
+    display: inline-block;
+    width: 20px !important;
+    height: 20px !important;
+    text-align: center;
+    font-size: small;
+    background-color: #656565a9;
+    color: #ffffff !important;
+    margin-left: 6px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.invalid-feedback {
+    font-size: small;
+}
+
+.btn-blue {
+    background-color: #007AFF !important;
+    color: #fff !important;
+}
+
+.rounded2 {
+    border-radius: 12px !important;
+}
+
+.required:after {
+    content: " *";
+    color: red;
+}
+
+/* Solusi untuk semua tipe input text dan textarea */
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="password"]::placeholder,
+input[type="search"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="url"]::placeholder,
+textarea::placeholder {
+    font-style: italic !important;
+    font-size: small !important;
+}
+
+.high-alert {
+    background-color: #ff00003f;
+    color: #e00000;
+    font-weight: bold;
+    border-radius: 4px !important;
+    text-align: center;
+}
+
+.normal-alert {
+    background-color: #fcc689;
+    color: #ff8800;
+    font-weight: bold;
+    border-radius: 4px !important;
+    text-align: center;
+}
+
+.low-alert {
+    background-color: #97F39E;
+    color: #009e25da;
+    font-weight: bold;
+    border-radius: 4px !important;
+    text-align: center;
+}
+
+.high-alert:hover {
+    background-color: #ff00003f !important;
+    color: #e00000 !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    text-align: center !important;
+}
+
+.normal-alert:hover {
+    background-color: #fcc689 !important;
+    color: #ff8800 !important;
+    font-weight: bold;
+    border-radius: 4px !important;
+    text-align: center !important;
+}
+
+.low-alert:hover {
+    background-color: #97F39E !important;
+    color: #009e25da !important;
+    font-weight: bold !important;
+    border-radius: 4px !important;
+    text-align: center !important;
+}
+.bg-hi-bold {
+    background-color: #3eafff !important;
+}
+
+.bg-done-bold {
+    background-color: #41f550 !important;
 }
